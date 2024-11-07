@@ -8,6 +8,7 @@ import (
 	"github.com/urfave/cli/v2"
 )
 
+// This command initializes a minimal config file in the project directory.
 func InitProject(c *cli.Context) error {
 	projectPath := c.Path("project-path")
 	requestedProvider := c.Args().First()

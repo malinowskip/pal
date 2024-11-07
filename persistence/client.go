@@ -90,8 +90,8 @@ func (c *DatabaseClient) runMigrations() error {
 
 	for id, sql := range allMigrations {
 		if id > *lastAppliedMigration {
-			// Transaction for applying the migration and adding its id to the
-			// `migrations` table.
+			// Transaction for applying the migration and recording in the `migrations`
+			// table that it has been applied
 			tx, err := c.Conn.Begin()
 
 			// Apply the migration.
@@ -106,7 +106,7 @@ func (c *DatabaseClient) runMigrations() error {
 				return err
 			}
 
-			// Commit two statements.
+			// Commit the two statements.
 			err = tx.Commit()
 			if err != nil {
 				return err

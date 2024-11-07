@@ -12,6 +12,9 @@ import (
 	"golang.org/x/text/message"
 )
 
+// This command outputs information on the context that would be sent to the LLM
+// based on the current configuration. Its purpose is to help the user estimate
+// expected token usage.
 func Analyze(c *cli.Context) error {
 	// Root path of the project. If not set by the user, it will be set to the
 	// current directory, i.e. ".".

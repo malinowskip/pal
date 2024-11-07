@@ -14,6 +14,8 @@ import (
 	"github.com/urfave/cli/v2"
 )
 
+// This command allows the user to talk to an LLM about their project by
+// starting a new conversation or continuing an existing one.
 func StartOrContinueConversation(c *cli.Context) error {
 	// The user must provide a message from up to two sources: stdin or --message
 	// argument. If both are provided, they will be concatenated.

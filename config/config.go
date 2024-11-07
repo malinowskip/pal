@@ -1,6 +1,6 @@
 // Configuration options available to the user. They should be defined in a
 // config file in TOML format in the root directory of a project. The config
-// file must exist, but all options are optional.
+// file is required, but all options are optional.
 
 package config
 
@@ -17,23 +17,23 @@ import (
 type Config struct {
 	// LLM provider. Either `openai`, `anthropic` or `testing`.
 	Provider string `toml:"provider,omitempty"`
-	// The system message is dynamically added to each request, followed by the
-	// context string.
+	// The system message is dynamically added to each request in a conversation,
+	// followed by the context string.
 	SystemMessage string `toml:"system-message,multiline,omitempty"`
 	// Additional .gitignore patterns for files that should be excluded from the
 	// context sent to the LLM.
 	Exclude []string `toml:"exclude"`
-	// Maximum length of the full context string.
+	// Maximum permitted length of the full context string (including XML tags).
 	MaxContextLength int `toml:"max-context-length,omitempty"`
-	// Files beyond this limit will be ignored. This value should be defined using
-	// SI notation, e.g. 20KB.
+	// Files exceeding this limit will be ignored. This value should be defined
+	// using SI notation, e.g. 20KB.
 	MaxFileSize string `toml:"max-file-size,omitempty"`
-	// Conversations beyond this limit will be pruned from the database. -1 can be
-	// set to ignore this option.
+	// Older conversations will be pruned from the database. -1 can be set to
+	// ignore this option.
 	MaxConversationHistory int `toml:"max-conversation-history,omitempty"`
-	// Openai configuration. Will be used if the `openai` provider is set.
+	// Configuration for the `openai` LLM provider.
 	Openai OpenaiConfig `toml:"openai,omitempty"`
-	// Anthropic configuration. Will be used if the `anthropic` provider is set.
+	// Configuration for the `anthropic` LLM provider.
 	Anthropic AnthropicConfig `toml:"anthropic,omitempty"`
 }
 

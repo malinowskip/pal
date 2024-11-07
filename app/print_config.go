@@ -7,6 +7,8 @@ import (
 	"github.com/urfave/cli/v2"
 )
 
+// This command resolves the final configuration (defaults + user’s overrides)
+// and prints them to the console.
 func PrintConfig(c *cli.Context) error {
 	projectPath := c.Path("project-path")
 

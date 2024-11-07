@@ -11,6 +11,7 @@ type AnthropicLLMProvider struct {
 	model  string
 }
 
+// Quality-of-life function to support short-hand model names for Anthropic.
 func resolveAnthropicModel(input string) string {
 	if input == "opus" {
 		return "claude-3-opus-latest"
@@ -62,9 +63,15 @@ func (p *AnthropicLLMProvider) GetCompletion(
 
 	for _, message := range messages {
 		if message.Role == "user" {
-			request.MessagesRequest.Messages = append(request.MessagesRequest.Messages, anthropic.NewUserTextMessage(message.Content))
+			request.MessagesRequest.Messages = append(
+				request.MessagesRequest.Messages,
+				anthropic.NewUserTextMessage(message.Content),
+			)
 		} else {
-			request.MessagesRequest.Messages = append(request.MessagesRequest.Messages, anthropic.NewAssistantTextMessage(message.Content))
+			request.MessagesRequest.Messages = append(
+				request.MessagesRequest.Messages,
+				anthropic.NewAssistantTextMessage(message.Content),
+			)
 		}
 	}
 

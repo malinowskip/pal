@@ -15,6 +15,7 @@ type Message struct {
 	Content string
 }
 
+// Creates an empty conversation in the database.
 func (c *DatabaseClient) InitializeConversation() (
 	Conversation,
 	error,
@@ -38,6 +39,7 @@ func (c *DatabaseClient) InitializeConversation() (
 	return convo, nil
 }
 
+// Simply fetches the conversation that was created most recently.
 func (c *DatabaseClient) FetchRecentConversation() (
 	Conversation,
 	error,
@@ -135,6 +137,8 @@ func (c *DatabaseClient) InsertMessageIntoConversation(
 	return message, nil
 }
 
+// Extends the existing content of a message with the provided text (used for
+// recording streaming responses from an LLM chat).
 func (c *DatabaseClient) WriteToMessage(messageId int64, text string) error {
 	_, err := c.Conn.Exec(
 		"update messages set content = concat(content, ?) where id = ?",

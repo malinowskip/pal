@@ -25,6 +25,7 @@ type message struct {
 	Content string
 }
 
+// Quality-of-life function to support short-hand model names for OpenAI.
 func resolveOpenaiModel(input string) string {
 	if input == "4o-mini" {
 		return "gpt-4o-mini"

@@ -1,7 +1,7 @@
 # Pal
 
 Pal is a command-line tool that facilitates conversations with language models
-(LLMs) about your project's source code and documentation.
+(LLMs) about your project’s source code and documentation.
 
 Pal may be a good fit if you want to include a predetermined set of documents as
 context for each request. By default, all text files in a project are sent to
