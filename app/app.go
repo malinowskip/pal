@@ -21,8 +21,9 @@ func Run(args []string) error {
 }
 
 var app = &cli.App{
-	Name:  constants.AppName,
-	Usage: "Talk to an LLM about your source code and documentation",
+	Name:    constants.AppName,
+	Version: constants.Version,
+	Usage:   "Talk to an LLM about your source code and documentation",
 	Flags: []cli.Flag{
 		&cli.PathFlag{
 			Name:    "project-path",

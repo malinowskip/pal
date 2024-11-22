@@ -6,4 +6,7 @@ const (
 
 	// Relative path to the app’s config directory within a project.
 	AppDir = ".pal"
+
+	// Version of the CLI application.
+	Version = "v0.1.0"
 )
