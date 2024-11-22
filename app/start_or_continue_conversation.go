@@ -239,6 +239,10 @@ func fetchUserMessage(c *cli.Context) (string, error) {
 		messageComponents = append(messageComponents, messageFromArgs)
 	}
 
+	if len(stdinText) == 0 && len(messageFromArgs) == 0 {
+		return "", fmt.Errorf("The message cannot be empty.")
+	}
+
 	finalMessage := strings.Join(messageComponents, "\n\n")
 
 	return finalMessage, nil

@@ -70,6 +70,12 @@ func TestExitsEarlyIfNoConfigFileInProject(t *testing.T) {
 	testutil.AssertDeepEquals(t, err.Error(), "Failed to open config file.")
 }
 
+func TestExitsEarlyIfMessageEmpty(t *testing.T) {
+	projectPath, _ := instantiateEnvironment(t)
+	err := Run([]string{"pal", "--path", projectPath})
+	testutil.AssertDeepEquals(t, err.Error(), "The message cannot be empty.")
+}
+
 func TestExitsEarlyIfContextExceedsLimit(t *testing.T) {
 	projectPath, _ := instantiateEnvironment(t)
 	conf, err := config.ResolveConfig(&config.Config{
