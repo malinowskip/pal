@@ -18,7 +18,7 @@ Currently, the installation is supported only via the Go toolchain. The
 following command will install `pal` on your system.
 
 ```sh
-go install https://github.com/malinowskip/pal
+go install github.com/malinowskip/pal@latest
 ```
 
 ## Getting started

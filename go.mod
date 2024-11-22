@@ -1,4 +1,4 @@
-module pal
+module github.com/malinowskip/pal
 
 go 1.22.0
 
