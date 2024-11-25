@@ -267,7 +267,7 @@ func resolveFinalConfig(projectPath string) (config.Config, error) {
 func checkContextLength(input string, maxLength int) error {
 	if len(input) > maxLength {
 		return fmt.Errorf(
-			`Context length (%d) exceeds the maximum permitted context (%d), configurable by setting the \"max-context-length\" configuration setting (measured in characters).`,
+			`Context length (%d) exceeds the maximum permitted context (%d), configurable by setting the "max-context-length" configuration setting (counted in characters).`,
 			len(input),
 			maxLength,
 		)

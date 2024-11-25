@@ -8,5 +8,5 @@ const (
 	AppDir = ".pal"
 
 	// Version of the CLI application.
-	Version = "v0.2.0"
+	Version = "v0.2.1"
 )
