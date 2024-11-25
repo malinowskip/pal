@@ -4,9 +4,10 @@ Pal is a command-line tool that facilitates conversations with language models
 (LLMs) about your project’s source code and documentation.
 
 Pal may be a good fit if you want to include a predetermined set of documents as
-context for each request. By default, all text files in a project are sent to
-the language model, except for those matching the provided “exclude”
-patterns or excluded via `.gitignore` files.
+context for each request; by default, all text files in a project are sent to
+the language model, except for those excluded via config options or `.gitignore`
+files. As a result, Pal might not be a good fit for large projects or if you
+only want to include context that is relevant to your query.
 
 To use Pal, you need to install the CLI tool and initialize a `pal.toml`
 configuration file in your project's root directory. Then you can start
@@ -110,4 +111,4 @@ The `pal.toml` configuration file supports the following options:
 - `anthropic.api-key-env`: The environment variable containing the Anthropic API key (default: `ANTHROPIC_API_KEY`).
 - `anthropic.model`: The Anthropic model to use (default: `claude-3-5-haiku-latest`).
 
-All options are optional and can be used to override the defaults.
+None of the options are required, unless you want to override the defaults.
