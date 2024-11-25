@@ -2,7 +2,7 @@ package llm_provider
 
 import (
 	"os"
-	"pal/config"
+	"github.com/malinowskip/pal/config"
 )
 
 // A provider should act as a proxy to some LLM provider, such as "openai",

@@ -1,8 +1,8 @@
 package persistence
 
 import (
-	"pal/constants"
-	"pal/util"
+	"github.com/malinowskip/pal/constants"
+	"github.com/malinowskip/pal/util"
 	"path"
 	"testing"
 )

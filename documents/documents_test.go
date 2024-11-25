@@ -2,7 +2,7 @@ package documents
 
 import (
 	"os"
-	"pal/testutil"
+	"github.com/malinowskip/pal/testutil"
 	"path"
 	"path/filepath"
 	"testing"

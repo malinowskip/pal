@@ -3,8 +3,8 @@ package persistence
 import (
 	"database/sql"
 	"os"
-	"pal/constants"
-	"pal/util"
+	"github.com/malinowskip/pal/constants"
+	"github.com/malinowskip/pal/util"
 	"path"
 
 	_ "github.com/mattn/go-sqlite3"

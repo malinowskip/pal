@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"os"
-	"pal/app"
+	"github.com/malinowskip/pal/app"
 )
 
 func main() {

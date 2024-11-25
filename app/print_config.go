@@ -2,7 +2,7 @@ package app
 
 import (
 	"fmt"
-	"pal/config"
+	"github.com/malinowskip/pal/config"
 
 	"github.com/urfave/cli/v2"
 )

@@ -1,7 +1,7 @@
 package config
 
 import (
-	"pal/testutil"
+	"github.com/malinowskip/pal/testutil"
 	"reflect"
 	"testing"
 )

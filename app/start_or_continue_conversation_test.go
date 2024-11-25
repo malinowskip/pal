@@ -2,10 +2,10 @@ package app
 
 import (
 	"os"
-	"pal/config"
-	"pal/llm_provider"
-	"pal/persistence"
-	"pal/testutil"
+	"github.com/malinowskip/pal/config"
+	"github.com/malinowskip/pal/llm_provider"
+	"github.com/malinowskip/pal/persistence"
+	"github.com/malinowskip/pal/testutil"
 	"path"
 	"testing"
 )

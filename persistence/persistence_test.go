@@ -1,7 +1,7 @@
 package persistence
 
 import (
-	"pal/testutil"
+	"github.com/malinowskip/pal/testutil"
 	"testing"
 )
 

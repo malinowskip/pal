@@ -3,11 +3,11 @@ package app
 import (
 	"errors"
 	"fmt"
-	"pal/config"
-	"pal/documents"
-	"pal/llm_provider"
-	"pal/persistence"
-	"pal/util"
+	"github.com/malinowskip/pal/config"
+	"github.com/malinowskip/pal/documents"
+	"github.com/malinowskip/pal/llm_provider"
+	"github.com/malinowskip/pal/persistence"
+	"github.com/malinowskip/pal/util"
 	"strings"
 
 	"github.com/dustin/go-humanize"

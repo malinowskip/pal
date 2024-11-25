@@ -2,8 +2,8 @@ package app
 
 import (
 	"os"
-	"pal/config"
-	"pal/documents"
+	"github.com/malinowskip/pal/config"
+	"github.com/malinowskip/pal/documents"
 	"path"
 	"testing"
 )

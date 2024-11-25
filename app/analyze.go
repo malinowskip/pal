@@ -3,7 +3,7 @@ package app
 import (
 	"errors"
 	"fmt"
-	"pal/documents"
+	"github.com/malinowskip/pal/documents"
 	"sort"
 
 	"github.com/dustin/go-humanize"
